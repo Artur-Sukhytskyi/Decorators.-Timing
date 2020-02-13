@@ -1,6 +1,9 @@
 import time
 
-def time_this(NUM_RUNS=10):
+number_of_runs = input("введите число запусков: ")
+number_of_runs = int(number_of_runs)
+
+def time_this(NUM_RUNS = number_of_runs):
     def decorator(func_to_run):
         def func(*args, **kwargs):
             avg = 0
@@ -16,9 +19,9 @@ def time_this(NUM_RUNS=10):
 
     return decorator
 
-number_of_runs = input("введите число запусков: ")
-
-@time_this(number_of_runs)
-def f():
+@time_this()
+def f(number_of_runs):
     for j in range(1000000):
         pass
+
+f(number_of_runs)
