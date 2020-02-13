@@ -16,7 +16,9 @@ def time_this(NUM_RUNS=10):
 
     return decorator
 
-@time_this(10)
+number_of_runs = input("введите число запусков: ")
+
+@time_this(number_of_runs)
 def f():
     for j in range(1000000):
         pass
