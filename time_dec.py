@@ -20,6 +20,7 @@ def time_this(NUM_RUNS = number_of_runs):
     return decorator
 
 @time_this()
+###Некоторая функция
 def f(number_of_runs):
     for j in range(1000000):
         pass
